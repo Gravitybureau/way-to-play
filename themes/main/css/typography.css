@@ -1,0 +1,384 @@
+/** ----------------------------------------------------------
+ *
+ * Contains the generic theme typography styles
+ *
+ *    Include your notes or table of contents here
+ *
+ *		Primary Color 	: 
+ *		Secondary Color : 
+ *
+ *    @author Your Name <email@gmail.com>
+ *
+ * ------------------------------------------------------- */
+
+
+  
+  
+/* ==============================================================
+ *		Webfonts
+ ================================================================ */
+
+
+@font-face {
+	font-family: 'Replica Bold';
+	src: 	url('../fonts/replica/Replica-Bold.eot'); 
+	src:	url('../fonts/replica/Replica-Bold.eot?#iefix') format('embedded-opentype'), 
+			url('../fonts/replica/Replica-Bold.woff') format('woff'),
+			url('../fonts/replica/Replica-Bold.ttf')  format('truetype'), 
+			url('../fonts/replica/Replica-Bold.svg#svgFontName') format('svg'); }
+
+@font-face {
+	font-family: 'Replica Bold Italic';
+	src: 	url('../fonts/replica/Replica-BoldItalic.eot'); 
+	src:	url('../fonts/replica/Replica-BoldItalic.eot?#iefix') format('embedded-opentype'), 
+			url('../fonts/replica/Replica-BoldItalic.woff') format('woff'),
+			url('../fonts/replica/Replica-BoldItalic.ttf')  format('truetype'), 
+			url('../fonts/replica/Replica-BoldItalic.svg#svgFontName') format('svg'); }
+
+@font-face {
+	font-family: 'Replica Regular';
+	src: 	url('../fonts/replica/Replica-Regular.eot'); 
+	src:	url('../fonts/replica/Replica-Regular.eot?#iefix') format('embedded-opentype'), 
+			url('../fonts/replica/Replica-Regular.woff') format('woff'),
+			url('../fonts/replica/Replica-Regular.ttf')  format('truetype'), 
+			url('../fonts/replica/Replica-Regular.svg#svgFontName') format('svg'); }
+
+@font-face {
+	font-family: 'Replica Italic';
+	src: 	url('../fonts/replica/Replica-Italic.eot'); 
+	src:	url('../fonts/replica/Replica-Italic.eot?#iefix') format('embedded-opentype'), 
+			url('../fonts/replica/Replica-Italic.woff') format('woff'),
+			url('../fonts/replica/Replica-Italic.ttf')  format('truetype'), 
+			url('../fonts/replica/Replica-Italic.svg#svgFontName') format('svg'); }
+
+@font-face {
+	font-family: 'Replica Light';
+	src: 	url('../fonts/replica/Replica-Light.eot'); 
+	src:	url('../fonts/replica/Replica-Light.eot?#iefix') format('embedded-opentype'), 
+			url('../fonts/replica/Replica-Light.woff') format('woff'),
+			url('../fonts/replica/Replica-Light.ttf')  format('truetype'), 
+			url('../fonts/replica/Replica-Light.svg#svgFontName') format('svg'); }
+
+@font-face {
+	font-family: 'Replica Bold Italic';
+	src: 	url('../fonts/replica/Replica-LightItalic.eot'); 
+	src:	url('../fonts/replica/Replica-LightItalic.eot?#iefix') format('embedded-opentype'), 
+			url('../fonts/replica/Replica-LightItalic.woff') format('woff'),
+			url('../fonts/replica/Replica-LightItalic.ttf')  format('truetype'), 
+			url('../fonts/replica/Replica-LightItalic.svg#svgFontName') format('svg'); }
+
+
+
+
+/* ==============================================================
+ *		Typography
+ ================================================================ */
+
+
+body {
+    font-size: 17px; 
+	font-weight: normal;
+    line-height: 25px; 
+    color: #6f6a6a;
+    font-family: 'Source Sans Pro',Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+  body a { text-decoration: none; }
+  body a:link { -webkit-tap-highlight-color: #3EBAEB }
+
+
+
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 { font-family: "Replica Bold", Helvetica Bold, Arial Bold, sans-serif; font-weight: normal; margin-bottom: 20px; }
+    
+h1, .h1 {
+	color: #1a1a1a;
+	font-size: 3.6em;
+	line-height: 1em;
+	font-weight: normal;
+	margin-bottom: 20px; }
+	
+h2, .h2 { font-size: 2.8em; line-height: 1em; }
+h3, .h3 { font-size: 2.4em; line-height: 1em; }
+h4, .h4 { font-size: 1.4em; line-height: 1.15em; font-family: "Replica Regular", Helvetica, Arial, sans-serif; }
+h5, .h5 { font-size: 1.2em; line-height: 1.2em; }
+h6, .h6 { font-size: 0.8em; line-height: 1.4em; }
+
+
+
+p, .p { font-size: 1em; line-height: 1.6em; font-weight: 400; margin-bottom: 20px; max-width: 550px; }
+	p.small, .p.small { font-size: 0.88em; }
+	p:last-child, .p:last-child { margin-bottom: 0;}
+	.center p, p.center { margin-left: auto; margin-right: auto; text-align: center; }
+	
+	.intro { font-size: 1.4em; line-height: 1.4em; font-family: "Replica Regular", Helvetica, Arial, sans-serif; }
+	
+em { font-style: italic; }
+
+
+
+
+
+a, 
+a.intro {
+    color: #17182f;
+    text-decoration: none;
+}
+
+.dark a { color: #E9F7FD; }
+.dark a:hover { color: #fff; }
+
+  a:hover { 
+    color: #4397d0;
+    text-decoration: underline;
+  }
+  a:focus { }
+  
+h3 a { line-height: 1.5em; border-bottom: 3px solid #e3e3e3; text-transform: none; }
+
+
+
+/* ==============================================================
+ *		Lists
+ ================================================================ */
+ 
+ 
+ul, 
+ol,
+dl { margin: 0; }
+ul li { list-style-type: none; } 
+  li { margin-bottom: 5px; }
+
+
+ul.lined {}
+	ul.lined li { border-top: 1px solid; border-color: rgba(0,0,0,0.1); padding: 5px 0; }
+	.dark ul.lined li { border-color: rgba(255,255,255,0.2); }
+
+/* ==============================================================
+ *		Tables
+ ================================================================ */
+ 
+ 
+table {
+    border-collapse: collapse; 
+    border: 1px solid #d4d4d4;
+    border-spacing: 0; 
+    margin: 0 0 10px;
+    text-align: left;
+}
+  table tr:nth-child(even) {
+      background-color: #ededed
+  }
+  table tr.even,
+  table th,
+  thead td {
+      background-color: #ededed
+  }
+  table td,
+  table th {
+      padding: 2px 5px;
+      border: 1px solid #d4d4d4;
+      vertical-align: top;
+  }
+  table th {
+      font-weight: bold;
+  }
+
+
+/* ==============================================================
+ *		WYSIWYG
+ ================================================================ */
+ 
+ 
+.left {
+    text-align: left;
+}
+.center {
+    text-align: center; float: none; margin-left: auto; margin-right: auto;
+}
+.right {
+    text-align: right; float: right;
+}
+
+
+/* ==============================================================
+ *		Images
+ ================================================================ */
+ 
+ 
+img {
+    height: auto; 
+}
+img.left {
+    float: left;
+    max-width: 50%;
+    margin: 5px 20px 10px 0;
+}
+img.right {
+    float: right;
+    max-width: 50%; 
+    margin: 5px 0 10px 20px;
+}
+img.leftAlone {
+    float: left;
+    margin-right: 100%;
+    margin-bottom: 10px;
+    clear: both;
+}
+img.center {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 10px;
+    clear: both;
+}
+.captionImage { width: 100%; margin-top: 5px; }
+.captionImage img { margin: 0; }
+  .captionImage.left {
+    float: left;
+    margin: 5px 30px 20px 0px;
+  }
+  .captionImage.right{
+    float: right;
+    margin: 5px 0 20px 30px;
+  }
+  .captionImage.left[style],
+  .captionImage.right[style] {
+    max-width: 50%;
+  }
+  .captionImage.left img,
+  .captionImage.right img {
+    float: none;
+    max-width: none;
+    width: 100%;
+  }
+  .captionImage.left img {
+    margin-right: -10px;
+  }
+  .captionImage.right img {
+    margin-left: -10px;
+  }
+  .captionImage.right p {
+    margin-left: -10px;
+    text-align: left;
+    margin-left: -10px;
+  }
+.captionImage.leftAlone{
+  float:none;
+  margin: 0 20px 20px 0px;
+}
+.captionImage.center{
+  margin: 0 auto 20px;
+}
+.captionImage p {
+  clear: both;
+  margin: 5px 0;
+  font-style: italic;
+  color: #888;
+}
+
+
+img.inline { margin-right: 10px; }
+
+
+/* ==============================================================
+ *		Blockquote
+ ================================================================ */
+ 
+ 
+blockquote {
+	background: transparent url(../images/blockquote.png) no-repeat 2px 2px;
+	font-family: 'Replica Regular', Arial, Helvetica, sans-serif;
+	color: #404040;
+	display: block;
+	margin: 0 0 20px;
+	float: left;
+	width: 100%;
+	padding-left: 35px;
+	clear: both; }
+
+blockquote p {
+	font-size: 2.4em;
+	line-height: 1.2em;
+	max-width: 100%;
+}
+blockquote p.author {
+	font-size: 16px;
+	line-height: 24px;
+	font-style: normal;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+pre {
+  background: #F7F7F7;
+  border: 1px solid #E4E4E4;
+  font-family: Courier, monospace;
+  margin: 0 0 20px 0;
+  padding: 15px;
+  clear: both;
+}
+
+/* ADDRESS */
+address {
+  display: block;
+  margin-bottom: 20px;
+}
+
+
+
+/* ==============================================================
+ *		Buttons
+ ================================================================ */
+
+
+a.btn, button, input[type="submit"], .Actions .action, button, .button, .btn {
+	min-width: 160px;
+	border: 0;
+	float: left; 
+	margin: 20px 20px 0 0;
+	background-color: #972669;
+	box-shadow: 2px 2px 0 0 rgba(0,0,0,0.2);
+	padding: 7px 20px;
+	overflow: hidden; 
+	position: relative;
+	display: block;
+	
+	-webkit-font-smoothing: antialiased;
+    font-family: 'Replica Bold', Arial, Helvetica, sans-serif; font-weight: normal;
+	color: #E9F7FD; 
+	font-size: 0.84em; 
+	text-transform: uppercase;
+	text-align: left;
+	
+	-webkit-transition: all 200ms cubic-bezier(0.35, 0.000, 0.65, 0.995); 
+	-moz-transition: all 200ms cubic-bezier(0.35, 0.000, 0.65, 0.995); 
+	-o-transition: all 200ms cubic-bezier(0.35, 0.000, 0.65, 0.995); 
+	transition: all 200ms cubic-bezier(0.35, 0.000, 0.65, 0.995); }
+	
+	a.btn:after, button:after, input[type="submit"]:after, .Actions .action:after, button:after, .button:after, .btn:after {
+		content: url(../images/btn-after.png); border-left: 1px solid rgba(255,255,255,0.1); padding: 8px 12px;
+		position: absolute; right: 0; top: 0; height: 100%; }
+	 	
+	a.btn:hover, button, input[type="submit"]:hover, .Actions .action:hover, button:hover, .button:hover, .dark .button:hover, .btn:hover 
+		{ background-color: #3886bb; text-decoration: none; color: #E9F7FD; }
+
+
+.center a.btn, .center button, .center input[type="submit"], 
+.center .Actions .action, .center button, .center .button, .center .btn { display: inline-block; float: none; }
+
+
+
+/* ==============================================================
+ *		Quick Styles
+ ================================================================ */
+
+.bar { padding: 0 5px; font-weight: 900; color: rgba(0,0,0,0.2); }
+
+.text-blue { color: #4397d0 !important; }
+.text-purple { color: #972669 !important; }
+.text-white { color: #E9F7FD !important; }
+.text-light { font-family: "Replica Light", Helvetica, Arial, sans-serif; }
+

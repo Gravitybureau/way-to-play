@@ -1,0 +1,78 @@
+/** ----------------------------------------------------------
+ *
+ *
+ *		Primary Color 	:
+ *		Secondary Color :
+ *		
+ *
+ * ------------------------------------------------------- */
+
+
+
+
+/* ==============================================================
+ *		Device and Responsive Layout
+ ================================================================ */
+ 
+ 
+
+
+/* BREAKPOINT 1280px */
+
+@media only screen and (max-width: 1200px) {
+	
+	/* Layout */
+	.inner { width: 100%; padding: 0 30px; }
+	
+	
+	
+	/* Services */
+	#servicesNav { height: 25%; border-top: 0; }
+	#servicesNav li { border-top: 1px solid rgba(0,0,0,0.1); height: 50%; width: 33.333%; box-sizing: border-box; margin: 0; }
+	
+		#servicesNav li h2 { float: right; padding: 12px 30px 12px 0; }
+	
+		#servicesNav li .icon { background-repeat: no-repeat; background-position: -100%; float: left; width: 100px; height: 50px; margin-bottom: 0; }
+		#servicesNav li:hover .icon { background-position: top center; }
+			
+	
+	#serviceHolder { height: 75%; }
+	
+	
+	
+	/* Staff */
+	#staffHolder .staff .staffdetails .content p,
+	#staffHolder .staff .staffdetails .content hr { display: none; }
+	
+	
+	
+	#Contact .details,
+	#Contact .form { width: 100%; }
+	
+	#Contact .details:after { content: ""; border-top:3px solid rgba(0,0,0,0.1); width:60px; margin: 2em 0; float: left; display: block; position: relative; }
+
+}
+
+
+
+/* BREAKPOINT 960px */
+
+@media only screen and (max-width: 960px) {
+	
+}
+
+
+
+/* BREAKPOINT 640px */
+
+@media only screen and (max-width: 640px) { 
+	
+}
+
+
+
+/* Print Styles */
+
+@media print {
+	
+}
