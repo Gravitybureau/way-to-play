@@ -19,5 +19,4 @@
 			
 		<% end_loop %>
 	</ul>
-	<div class="menu-btn"></div>
 </nav>

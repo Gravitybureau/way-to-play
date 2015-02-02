@@ -1,4 +1,5 @@
-<h3>$Title</h3>
+<h1>$Title</h1>
+
 
 <div class="unit size1of3 sidebar">
 	<% include Sidebar %>

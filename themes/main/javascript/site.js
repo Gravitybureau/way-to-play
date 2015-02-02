@@ -1,37 +1,47 @@
-$('.menu-btn').click(function() {
-	$('.main-nav').toggleClass('open');
-});
-
-	
-
-/***********************
-
-	Testimonials
-	
-***********************/
-
 
 var $document = $(document),
     className = 'hasScrolled';
 
-$document.ready(function() {
-	var $testimonialholder = $('.testimonial-holder');
-	var $testimonial = $testimonialholder.find('.testimonial');
-	
-	if ($testimonial.length > 1) {
-		
-		$('#testimonial-next').on('click', function() {
-			$currentTestimonial = $testimonialholder.find('.current');
-			var $nextTestimonial = $currentTestimonial.next();
-			if ($nextTestimonial.length == 0) {
-				$nextTestimonial = $testimonialholder.find('.testimonial').first();
-			}	
-			$nextTestimonial.addClass('current');
-			$currentTestimonial.removeClass('current');
-			
-			return false;
-		})
-		
-	}
+/* ==============================================================
+ *		Header 
+ ================================================================ */
+
+$('#loginBtn').click(function(){
+	$('#loginBtn').hide();
+	$('#headerLoginForm').removeClass('hide');
 });
+
+$('.header .dropdownLink').click(function(){
+	if($(this).hasClass('drop')){
+		$(this).removeClass('drop');
+		$('.header .dropdown ul').slideUp(200); 
+	}else{
+		$(this).addClass('drop');
+		$('.header .dropdown ul').slideDown(200);
+	}
+	return false;
+});
+
+$document.scroll(function(){
+	$('.header .dropdownLink').removeClass('drop');
+	$('.header .dropdown ul').slideUp(200); 
+});
+
+$('body').click(function(e) {
+    if ($(e.target).closest('.header .dropdown ul').length === 0) {
+		$('.header .dropdownLink').removeClass('drop');
+		$('.header .dropdown ul').slideUp(200); 
+    }
+});
+
+
+/* ==============================================================
+ *		Way to Play qualification check
+ ================================================================ */
+ 
+$('#wtpNo').click(function(){
+	$('#mainPages').addClass('minimise');
+});
+
+
 

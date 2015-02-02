@@ -17,3 +17,6 @@ $databaseConfig = array(
 i18n::set_locale('en_US');
 
 Object::add_extension('SiteConfig', 'SiteDetails');
+Object::add_extension('Member', 'MemberExtension');
+
+Security::set_default_login_dest('home');

@@ -1,30 +1,23 @@
-<div class="blogSummary">
-	<div class="unit size2of3">
-		<h2 class="postTitle"><a href="$Link" title="<% _t('BlogSummary_ss.VIEWFULL', 'View full post titled -') %> '$Title'">$MenuTitle</a></h2>
+<div class="box size1of2<% if MultipleOf(2) %> rl<% end_if %>">
 	
-		<% if BlogHolder.ShowFullEntry %>
-			$Content
-		<% else %> 
-			<p>$Content.FirstParagraph(html)</p>
-		<% end_if %>
-	</div>
+	<h3 class="nomargin"><a href="$Link" title="View full post titled - '$Title'">$MenuTitle</a></h3>
 	
-	<div class="unit size1of3">
-		<ul class="lined">
-			<li><p>Posted by $Author.XML on $Date.Long</p></li>
-			<li class="tags">
-				<% if TagsCollection %>
-						Tags:
-						<% loop TagsCollection %>
-							<a href="$Link" title="View all posts tagged '$Tag'" rel="tag">$Tag</a><% if not Last %>,<% end_if %>
-						<% end_loop %>
-					</p>
-				<% end_if %>
-			</li>
-			<li><p><a href="$Link" class="readmore" title="Read Full Post">Read the full post</a></p></li>
-		</ul>
-	</div>
+	<h6 class="nomargin">
+		<% loop TagsCollection %>
+			<a href="$Link" title="View all posts tagged '$Tag'" rel="tag">$Tag</a><% if not Last %>,<% end_if %>
+		<% end_loop %>
+		<span class="text-bar">I</span>
+		Posted by $Author.XML<% if Date %> on $Date.Long<% end_if %>
+	</h6>
+
+	<% if BlogHolder.ShowFullEntry %>
+		$Content
+	<% else %> 
+		<p>$Content.FirstParagraph(html)</p>
+	<% end_if %>
 	
-	<hr>
+	<a href="$Link" class="link-line">
+		Read more
+	</a>
 	
 </div>

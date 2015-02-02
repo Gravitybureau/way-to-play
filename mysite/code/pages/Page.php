@@ -3,10 +3,13 @@ class Page extends SiteTree {
 
 	private static $db = array(
 		'PrimaryNav' => 'Boolean',
-		'PageDescription' => 'Text'
+		'TabbedNav' => 'Boolean',
+		'PageDescription' => 'Text',
+		'Color' => 'Text'
 	);
 
 	private static $has_one = array(
+		'Icon' => 'Image'
 	);
     
     private static $has_many = array(
@@ -16,8 +19,21 @@ class Page extends SiteTree {
 	
         $fields = parent::getCMSFields();
         
-   	    $fields->addFieldToTab('Root.Main', $pageDesc = new TextareaField('PageDescription','Page Description'));
+   	    $fields->addFieldToTab('Root.Main', $pageDesc = new TextareaField('PageDescription','Page Description'), 'Content');
 	    $pageDesc->setDescription('A one sentence description of the page to be shown with links.');
+	    
+        if($this->ParentID == 0) {
+        
+	   	    $fields->addFieldToTab('Root.Main', new UploadField('Icon','Page Icon'), 'Content');
+			$fields->addFieldToTab('Root.Main', new DropdownField('Color','Colour', array(
+				'' => '',
+				'greenAccent' => 'Green',
+				'purpleAccent' => 'Purple',
+				'blueAccent' => 'Blue',
+				)
+			), 'Content');
+			
+        }
 	    		
         return $fields;
     }
@@ -29,6 +45,12 @@ class Page extends SiteTree {
 	        FieldGroup::create(
 	            new CheckboxField('PrimaryNav')
 	        )->setTitle('Show this in top navigation?')
+	    );
+	    
+	    $fields->addFieldToTab('Root.Settings',
+	        FieldGroup::create(
+	            new CheckboxField('TabbedNav')
+	        )->setTitle('Add this page to main tabbed navigation bar?')
 	    );
     
 	    return $fields;
@@ -63,7 +85,7 @@ class Page_Controller extends ContentController {
 	}
 	
 	function getMainPages() {
-		$pages = DataObject::get('MainPage');
+		$pages = DataObject::get('Page')->filter('TabbedNav', 1);
 		return $pages;
 	}
 

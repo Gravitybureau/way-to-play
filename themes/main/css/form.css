@@ -80,13 +80,37 @@ textarea {
     width: 13px; 
     height: 13px; 
     margin-right: 6px; 
-    margin-top: 3px;
+    margin-top: 6px;
     padding: 0;
 }
     .checkbox label.right,
     .radio label.right {
         float: left;
     }
+    
+    
+    
+    
+ul.optionset.buttons { width: 100%; float: left; }
+    
+ul.optionset.buttons li {
+	float: left;
+	background-color: #2FC8DE;
+	padding: 7px 12px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+	overflow: hidden; 
+	position: relative;
+	display: block;
+	border-radius: 3px;
+	-webkit-font-smoothing: antialiased;
+    font-family: 'Replica Bold', Arial, Helvetica, sans-serif; font-weight: normal;
+	color: #f4f4f4; 
+	font-size: 0.84em; 
+	text-transform: uppercase; }
+	
+	ul.optionset.buttons li input.radio { }
 
 
 
@@ -118,10 +142,7 @@ form .message {
  *		Actions
  ================================================================ */
  
- 
-.Actions {
-    margin-bottom: 20px;
-}
+
 
     .ie7 input.action {
         width: 0;                     /* IE table-cell margin fix */
@@ -134,12 +155,7 @@ form .message {
     .ie7 .Actions .action {
         float: left;
     }
-    .Actions:after {
-        color: #B94A48;
-        display: inline-block;
-        font-weight: normal;
-        margin-top: 9px;
-    }
+    
     #MemberLoginForm_LoginForm .Actions:after {
         display: none;
     }

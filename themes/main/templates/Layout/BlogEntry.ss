@@ -5,20 +5,20 @@
 
 <div class="unit size2of3" id="BlogContent">
 	<div class="content">
-	
-		<% include BreadCrumbs %>
-	
+		
 		<div class="blogEntry">
 			<h2 class="postTitle">$Title</h2>
-			<p class="authorDate">Posted by $Author.XML on $Date.Long</p>
+			
+			<p class="authorDate">Posted by $Author.XML on $Date.Long
+			<span class="text-bar">I</span>
 			<% if TagsCollection %>
-				<p class="tags">
-					Tags:
-					<% loop TagsCollection %>
-						<a href="$Link" title="View all posts tagged '$Tag'" rel="tag">$Tag</a><% if not Last %>,<% end_if %>
-					<% end_loop %>
-				</p>
-			<% end_if %>		
+				Tagged:
+				<% loop TagsCollection %>
+					<a href="$Link" title="View all posts tagged '$Tag'" rel="tag">$Tag</a><% if not Last %>,<% end_if %>
+				<% end_loop %>
+			<% end_if %>
+			</p>
+					
 			$Content		
 		</div>
 		

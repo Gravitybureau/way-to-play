@@ -3,7 +3,7 @@ class ContactPage extends Page {
 	
 	private static $db = array(
         'Mailto' => 'Varchar(100)',
-        'SubmitText' => 'Text',
+        'SubmitText' => 'Text'
 	);
 
 	private static $has_one = array(

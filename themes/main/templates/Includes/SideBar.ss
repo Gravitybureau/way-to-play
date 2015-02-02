@@ -1,11 +1,8 @@
+<% if $Menu(2) %>
 <aside class="sidebar-content">
 	
-	<% if $Menu(2) %>
 		<nav class="secondary">
 			<% with $Level(1) %>
-				<h5>
-					<a href="$Link">$MenuTitle</a>
-				</h5>
 				<p>
 					$PageDescription
 				</p>
@@ -14,5 +11,6 @@
 				</ul>
 			<% end_with %>
 		</nav>
-	<% end_if %>
+	
 </aside>
+<% end_if %>
